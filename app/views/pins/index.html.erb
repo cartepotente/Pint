@@ -1,0 +1,19 @@
+<div id="pins" class="transitions-enabled">
+
+	<% @pins.each do |p| %>
+		<div class="box panel panel-default">	
+			
+			<%= link_to (image_tag p.image.url), p %>
+			
+			<div class="panel-body">
+				<h2> <%= link_to p.titulo, p %> </h2>
+				<p class="user">
+					Pineado por:
+					<%= p.user.email %>
+				</p>	
+			</div>
+		</div>
+	<% end %>
+	
+
+</div>
